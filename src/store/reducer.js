@@ -1,12 +1,12 @@
-// import defaultState from './initialstate'
+import stateArea from './initialstate'
 
-// const reducer = (state = defaultState, action) => {
-//   switch (action.type) {
-//     case 'CHANGE':
-//       return action.input;
-//     default: // действие по умолчанию – возврат текущего состояния
-//       return state;
-//   }
-// };
+const reducer = (state = stateArea, action) => {
+  switch (action.type) {
+    case 'CHANGE':
+      return {area: action.payload};
+    default: // действие по умолчанию – возврат текущего состояния
+      return state;
+  }
+};
  
-// export default reducer;
+export default reducer;

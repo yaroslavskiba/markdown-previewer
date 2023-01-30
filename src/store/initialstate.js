@@ -1,8 +1,8 @@
-// const CHANGE = 'CHANGE';
+const CHANGE = 'CHANGE';
 
-// const change = {
-//   type: CHANGE,
-//   area: ''
-// }
+const stateArea = {
+  type: CHANGE,
+  area: 'Введите текст',
+}
 
-// export default change;
+export default stateArea;
