@@ -1,8 +1,38 @@
+.toolContainer {
+  background-color: #f2f6f2;
+  width: 100%;
+  padding: 3px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.toolContainer .toolName {
+  display: flex;
+  align-items: center;
+}
+.toolContainer .toolName .toolText {
+  margin-right: 5px;
+  font-size: 16px;
+  color: #373d4a;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+html,
 body {
+  color: #373d4a;
+  background-color: #8e938f;
+  width: 100%;
+  height: 100%;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.5;
-  font-family: "Raleway", sans-serif;
+  font-family: Roboto, sans-serif;
+}
+
+input,
+textarea {
+  outline: none;
 }
 
 * {
@@ -50,46 +80,95 @@ ul li {
   list-style: none;
 }
 
-#preview blockquote {
+#root {
+  padding: 25px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#root .editorContainer {
+  margin-bottom: 20px;
+  max-width: 767px;
+  width: 100%;
+  max-height: 440px;
+  height: 100%;
+}
+#root .editorContainer #editor {
+  background-color: inherit;
+  padding: 10px;
+  border: 2px solid #767671;
+  font-size: 16px;
+  letter-spacing: 2px;
+  box-shadow: 5px 3px 2px #767671;
+  width: 100%;
+  height: 100%;
+}
+#root .previewerConteiner {
+  max-width: 947px;
+  width: 100%;
+  max-height: 440px;
+  height: 100%;
+}
+#root .previewerConteiner #preview {
+  line-height: 2.5;
+  padding: 15px 10px 25px 15px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  box-shadow: 5px 3px 2px #767671;
+  border: 2px solid #767671;
+  width: 100%;
+  height: 100%;
+}
+#root .previewerConteiner #preview blockquote {
   border-left: 3px solid #224b4b;
   color: #224b4b;
   padding-left: 5px;
   margin-left: 25px;
 }
-#preview p > code {
-  padding: 3px;
+#root .previewerConteiner #preview p > code {
+  padding: 5px 8px;
 }
-#preview code {
-  background: white;
+#root .previewerConteiner #preview pre {
+  border-radius: 5px;
+  display: block;
+  overflow: auto;
+  background-color: rgb(55, 61, 74);
+  padding: 5px 8px;
+  line-height: 1.2;
+}
+#root .previewerConteiner #preview code {
+  border-radius: 5px;
+  background-color: rgb(55, 61, 74);
+  color: #f2f6f2;
   font-size: 0.875rem;
   font-weight: bold;
 }
-#preview pre {
-  display: block;
-  overflow: auto;
-  background: white;
-  padding: 5px;
-  line-height: 1.2;
-}
-#preview h1 {
+#root .previewerConteiner #preview h1 {
   border-bottom: 2px solid #224b4b;
 }
-#preview h2 {
+#root .previewerConteiner #preview h2 {
   border-bottom: 1px solid #224b4b;
 }
-#preview table {
+#root .previewerConteiner #preview table {
   border-collapse: collapse;
 }
-#preview td,
-#preview th {
+#root .previewerConteiner #preview td,
+#root .previewerConteiner #preview th {
   border: 2px solid #224b4b;
   padding-left: 5px;
   padding-right: 5px;
 }
-#preview img {
+#root .previewerConteiner #preview img {
   display: block;
   max-width: 90%;
   margin: 2rem auto;
+}
+#root .previewerConteiner #preview ol {
+  padding-left: 25px;
+}
+#root .previewerConteiner #preview a {
+  color: inherit;
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import {Provider, useDispatch, useSelector} from 'react-redux'
 import store from './store/store';
-import {marked} from 'marked';
+import { marked } from 'marked';
+import ToolBar from './bar';
 
 
 function App() {
@@ -15,8 +16,14 @@ function App() {
   }
   return (
     <>
-      <textarea id="editor" onChange={handleChange} value={area}></textarea>
-      <div id="preview" dangerouslySetInnerHTML={createMarkUp(area)} />
+      <div className='editorContainer'>
+        <ToolBar />
+        <textarea id='editor' onChange={handleChange} value={area} rows='10'></textarea>
+      </div>
+      <div className='previewerConteiner'>
+        <ToolBar />
+        <div id='preview' dangerouslySetInnerHTML={createMarkUp(area)} />
+      </div>
     </>
   );
 }
