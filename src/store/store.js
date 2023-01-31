@@ -1,6 +1,12 @@
-import { legacy_createStore as createStore} from 'redux'
-import reducer from "./reducer";
+import { legacy_createStore as createStore, combineReducers} from 'redux'
+import stateReducer from "./reducers/markReducer";
+import screenReducer from "./reducers/fullscreenReducer"
 
-const store = createStore(reducer);
+const rootReducer = combineReducers({
+  state: stateReducer,
+  screen: screenReducer,
+})
+
+const store = createStore(rootReducer);
 
 export default store;

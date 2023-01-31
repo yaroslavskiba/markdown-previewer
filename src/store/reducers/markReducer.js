@@ -1,6 +1,6 @@
-import stateArea from './initialstate'
+import stateArea from '../states/markInitialState'
 
-const reducer = (state = stateArea, action) => {
+const stateReducer = (state = stateArea, action) => {
   switch (action.type) {
     case 'CHANGE':
       return {area: action.payload};
@@ -9,4 +9,4 @@ const reducer = (state = stateArea, action) => {
   }
 };
  
-export default reducer;
+export default stateReducer;

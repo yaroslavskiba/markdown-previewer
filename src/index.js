@@ -9,18 +9,22 @@ import ToolBar from './bar';
 
 function App() {
   const dispatch = useDispatch();
-  const area = useSelector(state => state.area);
+  const area = useSelector(state => state.state.area);
+  const screen = useSelector(state => state.screen.screen);
+  const handleScreen = (n) => {
+    return screen === 'normal' ? n : `${n} fullscreen`
+  }
   const handleChange = (e) => dispatch({ type: `CHANGE`, payload: e.target.value });
   const createMarkUp = (val) => {
     return { __html: marked.parse(val) }
   }
   return (
     <>
-      <div className='editorContainer'>
+      <div className={handleScreen('editorContainer')}>
         <ToolBar />
         <textarea id='editor' onChange={handleChange} value={area} rows='10'></textarea>
       </div>
-      <div className='previewerConteiner'>
+      <div className={handleScreen('previewerConteiner')}>
         <ToolBar />
         <div id='preview' dangerouslySetInnerHTML={createMarkUp(area)} />
       </div>
