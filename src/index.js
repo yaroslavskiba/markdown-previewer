@@ -3,18 +3,20 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import {Provider, useDispatch, useSelector} from 'react-redux'
 import store from './store/store';
+import {marked} from 'marked';
 
 
 function App() {
   const dispatch = useDispatch();
   const area = useSelector(state => state.area);
-  console.log(area)
   const handleChange = (e) => dispatch({ type: `CHANGE`, payload: e.target.value });
-
+  const createMarkUp = (val) => {
+    return { __html: marked.parse(val) }
+  }
   return (
     <>
       <textarea id="editor" onChange={handleChange} value={area}></textarea>
-      <div id="preview" style={{fontSize:30}}>{ area }</div>
+      <div id="preview" dangerouslySetInnerHTML={createMarkUp(area)} />
     </>
   );
 }
@@ -26,4 +28,11 @@ root.render(
   </Provider>
 );
 
+marked.setOptions({
+  renderer: new marked.Renderer(),
+  breaks: true,
+  headerIds: false,
+  sanitize: true,
+  smartypants: true,
   
+});
