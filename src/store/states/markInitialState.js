@@ -38,7 +38,8 @@ And here. | Okay. | I think we get it.
 
 
 1. And there are numbered lists too.
-1. Use just 1s if you want!`
+1. Use just 1s if you want!
+![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)`
 
 const stateArea = {
   type: CHANGE,
