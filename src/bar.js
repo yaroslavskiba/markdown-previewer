@@ -6,7 +6,6 @@ function ToolBar(props) {
   const dispatch = useDispatch();
   const screenName = props.screenName;
   const screenState = props.stateScreen;
-  console.log(screenName, screenState)
 
   const rend = () => {
     if(screenState === 'normal') {

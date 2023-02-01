@@ -25,10 +25,6 @@ function App() {
   }
   const handleChange = (e) => dispatch({ type: `CHANGE`, payload: e.target.value });
 
-  const createMarkUp = (val) => {
-    return { __html: marked.parse(val) }
-  }
-
   return (
     <>
       <div className='editorContainer' style={handleStyleEdit(edit)}>
@@ -37,7 +33,7 @@ function App() {
       </div>
       <div className='previewerContainer' style={handleStyleEdit(preview)}>
         <ToolBar screenName='preview' stateScreen={preview} />
-        <div id='preview' dangerouslySetInnerHTML={createMarkUp(area)} />
+        <div id='preview' dangerouslySetInnerHTML={{ __html: marked(area)}} />
       </div>
     </>
   );
@@ -51,8 +47,5 @@ root.render(
 );
 
 marked.setOptions({
-  renderer: new marked.Renderer(),
   breaks: true,
-  headerIds: false,
-  smartypants: true,  
 });
