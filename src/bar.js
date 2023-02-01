@@ -1,11 +1,9 @@
 import React from 'react';
 import { GiConvergenceTarget, GiFountainPen } from "react-icons/gi";
-import { useDispatch, useSelector} from 'react-redux'
+import { useDispatch} from 'react-redux'
 
 function ToolBar(props) {
   const dispatch = useDispatch();
-  // const edit = useSelector(state => state.screen.edit);
-  // const preview = useSelector(state => state.screen.preview);
   const screenName = props.screenName;
   const screenState = props.stateScreen;
   console.log(screenName, screenState)
