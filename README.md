@@ -1,6 +1,6 @@
 # Build a Markdown Previewer
 
-[CodeSandBox](https://codesandbox.io/p/github/yaroslavskiba/markdown-previewer/draft/beautiful-frost?file=%2FREADME.md)
+[Test 8/8 CodeSandBox](https://codesandbox.io/p/github/yaroslavskiba/markdown-previewer/master?file=%2FREADME.md)
 
 Objective: Build an app that is functionally similar to this: `https://markdown-previewer.freecodecamp.rocks/`.
 
