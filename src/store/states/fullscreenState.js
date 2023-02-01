@@ -2,8 +2,8 @@ const FULLSCREEN = 'FULLSCREEN';
 
 const stateScreen = {
   type: FULLSCREEN,
-  screen: 'normal',
-  
+  edit: 'normal',
+  preview: 'normal'
 }
 
 export default stateScreen;

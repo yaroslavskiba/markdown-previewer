@@ -72,11 +72,9 @@ ul li {
     margin-bottom: 20px;
     max-width: 767px;
     width: 100%;
-    max-height: 440px;
-    height: 100%;
 
     #editor {
-      background-color: inherit;
+      background-color: #d0d8d1;
       padding: 10px;
       border: 2px solid #767671;
       font-size: 16px;
@@ -86,13 +84,14 @@ ul li {
       height: 100%;
     }
   }
-  .previewerConteiner {
+  .previewerContainer {
     max-width: 947px;
     width: 100%;
     max-height: 440px;
     height: 100%;
 
     #preview {
+      background-color: #d0d8d1;
       line-height: 2.5;
       padding: 15px 10px 25px 15px;
       font-size: 16px;
